@@ -24,6 +24,7 @@ public class BookServlet extends HttpServlet {
             String method = req.getParameter("method");
             String bid = req.getParameter("bid");
             System.out.println(method);
+            System.out.println("main");
 
             if("del".equals(method)){
                 int del = bookDAO.del(Integer.parseInt(bid));
