@@ -31,6 +31,7 @@ public class BookServlet extends HttpServlet {
 
             if("queryAll".equals(method)){
                 List<Book> books = bookDAO.bookList();
+                System.out.println(books);
                 if(books != null){
                     resp.getWriter().write(JSON.toJSONString(books));
                 }
